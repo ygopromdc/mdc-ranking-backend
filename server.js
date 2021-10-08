@@ -19,7 +19,7 @@ fastify.get('/', async (req, res) => {
             //     // console.log(member.user.username)
             //     console.log(member.user)
             // });
-            client.destroy();
+            // client.destroy();
             return members;
         });
     });
