@@ -14,13 +14,15 @@ fastify.get('/', async (req, res) => {
         // Fetch and get the list named 'members'
         guild.members.fetch().then(members => {
             // Loop through every members
-            // members.forEach(member => {
-            //     // Do whatever you want with the current member
-            //     // console.log(member.user.username)
-            //     console.log(member.user)
-            // });
+            var guildmembers = [];
+            members.forEach(member => {
+                // Do whatever you want with the current member
+                // console.log(member.user.username)
+                // console.log(member.user)
+                guildmembers.push(member)
+            });
             // client.destroy();
-            return members;
+            return guildmembers;
         });
     });
     // fastify.log.info(req.query)
