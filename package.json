@@ -1,0 +1,12 @@
+{
+  "name": "mdc-ranking-backend",
+  "version": "1.0.0",
+  "description": "Ranking Mundo de Clanes",
+  "main": "index.js",
+  "author": "Diego Cornejo",
+  "license": "MIT",
+  "dependencies": {
+    "@vercel/node": "^1.12.1",
+    "fastify": "^3.22.0"
+  }
+}
