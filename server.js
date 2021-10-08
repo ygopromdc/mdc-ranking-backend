@@ -1,19 +1,18 @@
 // Require the framework and instantiate it
-const fastify = require('fastify')({ logger: true })
+const fastify = require('fastify')({
+    logger: true
+})
 
 // Declare a route
-fastify.get('/', async (req, res) => {
-	fastify.log.info(req.query)
-	return { hello: 'world' }
+fastify.get('/', function (request, reply) {
+    reply.send({'message':'Hello from fastify'})
 })
 
 // Run the server!
-const start = async () => {
-	try {
-		await fastify.listen(3000)
-	} catch (err) {
-		fastify.log.error(err)
-		process.exit(1)
-	}
-}
-start()
+fastify.listen(3000, function (err, address) {
+    if (err) {
+        fastify.log.error(err)
+        process.exit(1)
+    }
+    fastify.log.info(`server listening on ${address}`)
+})
