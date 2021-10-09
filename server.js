@@ -4,7 +4,7 @@ const fastify = require('fastify')({ logger: true })
 const { Client, Intents } = require('discord.js');
 // const client = new Client({ intents: [Intents.FLAGS.GUILDS, Intents.FLAGS.GUILD_MEMBERS] });
 const client = new Client({ intents: [Intents.FLAGS.GUILD_MEMBERS] });
-client.login('ODk0ODE2MDI0MTIwMTM5Nzg2.YVvgXQ.BD1uNlbiQfBy4hfRxfVHdDS3syU');
+client.login(process.env.DISCORD_TOKEN);
 
 // Declare a route
 fastify.get('/', async (req, res) => {
