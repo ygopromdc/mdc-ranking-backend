@@ -18,6 +18,7 @@
 		"@types/node": "^16.10.2"
 	},
 	"scripts": {
-		"dev": "PORT=3000 node server.js"
+		"dev": "PORT=3000 node server.js",
+		"inspect" : "PORT=3000 node --inspect server.js"
 	}
 }
