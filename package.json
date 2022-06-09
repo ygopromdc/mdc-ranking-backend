@@ -1,24 +1,21 @@
 {
 	"name": "mdc-ranking-backend",
 	"version": "1.0.0",
-	"engines": {
-		"node": "16.6.0"
-	},
 	"description": "Ranking Mundo de Clanes",
 	"main": "server.js",
 	"author": "Diego Cornejo",
 	"license": "MIT",
 	"dependencies": {
-		"fastify": "^3.22.0",
 		"@discordjs/rest": "latest",
 		"discord-api-types": "latest",
-		"discord.js": "latest"
+		"discord.js": "latest",
+		"fastify": "4.0.0"
 	},
 	"devDependencies": {
 		"@types/node": "^16.10.2"
 	},
 	"scripts": {
 		"dev": "PORT=3000 node server.js",
-		"inspect" : "PORT=3000 node --inspect server.js"
+		"inspect": "PORT=3000 node --inspect server.js"
 	}
 }
